@@ -1,7 +1,7 @@
 tiny-spring
 =======
 
->A tiny IoC container refer to Spring.
+> A tiny IoC container refer to Spring.
 
 ## 关于
 
@@ -27,7 +27,7 @@ tiny-spring
 
 ## 下面是推广
 
-如果觉得代码理解有难度的，可以报名@方老司 的视频教程：
+如果觉得代码理解有难度的，可以报名 @方老司 的视频教程：
 
 [60分钟徒手撸出Spring框架:土法造炮篇](https://segmentfault.com/l/1500000013061317?d=be83d672744f2f15b77bb40795505e4b)
 

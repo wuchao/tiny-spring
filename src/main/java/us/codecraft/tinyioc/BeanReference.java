@@ -7,6 +7,7 @@ public class BeanReference {
 
     private String name;
 
+    // 这个字段的作用是什么
     private Object bean;
 
     public BeanReference(String name) {

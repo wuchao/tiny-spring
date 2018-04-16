@@ -24,7 +24,7 @@ public class AspectJExpressionPointcutTest {
         String expression = "execution(* us.codecraft.tinyioc.*.*(..))";
         AspectJExpressionPointcut aspectJExpressionPointcut = new AspectJExpressionPointcut();
         aspectJExpressionPointcut.setExpression(expression);
-        boolean matches = aspectJExpressionPointcut.getMethodMatcher().matches(HelloWorldServiceImpl.class.getDeclaredMethod("helloWorld"),HelloWorldServiceImpl.class);
+        boolean matches = aspectJExpressionPointcut.getMethodMatcher().matches(HelloWorldServiceImpl.class.getDeclaredMethod("helloWorld"), HelloWorldServiceImpl.class);
         Assert.assertTrue(matches);
     }
 }

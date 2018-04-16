@@ -149,6 +149,7 @@ helloWorldService.helloWorld();
 # 第二部分：AOP及实现
 
 AOP相关概念较多，我不会一一列举，但是会在每一步对概念做一点解释。
+> [Spring AOP中Pointcut,dvice 和 Advisor三个概念](https://www.cnblogs.com/xiao--y/p/6634556.html)
 
 AOP分为配置(Pointcut，Advice)，织入(Weave)两部分工作，当然还有一部分是将AOP整合到整个容器的生命周期中。
 
@@ -157,7 +158,7 @@ AOP分为配置(Pointcut，Advice)，织入(Weave)两部分工作，当然还有
 	
 织入（weave）相对简单，我们先从它开始。Spring AOP的织入点是`AopProxy`，它包含一个方法`Object getProxy()`来获取代理后的对象。
 
-在Spring AOP中，我觉得最重要的两个角色，就是我们熟悉的`MethodInterceptor`和`MethodInvocation`（这两个角色都是AOP联盟的标准），它们分别对应AOP中两个基本角色：`Advice`和`Joinpoint`。Advice定义了在切点指定的逻辑，而Joinpoint则代表切点。
+在Spring AOP中，我觉得最重要的两个角色，就是我们熟悉的`MethodInterceptor`和`MethodInvocation`（这两个角色都是AOP联盟的标准），它们分别对应AOP中两个基本角色：`Advice`和`Joinpoint`。Advice定义了在切点指定的逻辑，Pointcut是JoinPoint的集合。
 
 ```java
 public interface MethodInterceptor extends Interceptor {

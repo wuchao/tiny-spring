@@ -42,9 +42,11 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         }
 
         // TODO:call initialize method
+
         for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
             bean = beanPostProcessor.postProcessAfterInitialization(bean, name);
         }
+
         return bean;
     }
 
@@ -87,6 +89,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
     public List getBeansForType(Class type) throws Exception {
         List beans = new ArrayList<Object>();
         for (String beanDefinitionName : beanDefinitionNames) {
+            //type是参数中Class的父类、被实现的接口或者是同一个类
             if (type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass())) {
                 beans.add(getBean(beanDefinitionName));
             }

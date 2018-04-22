@@ -149,7 +149,7 @@ helloWorldService.helloWorld();
 # 第二部分：AOP及实现
 
 AOP相关概念较多，我不会一一列举，但是会在每一步对概念做一点解释。
-> [Spring AOP中Pointcut,dvice 和 Advisor三个概念](https://www.cnblogs.com/xiao--y/p/6634556.html)
+> (https://www.cnblogs.com/hongwz/p/5764917.html)
 
 AOP分为配置(Pointcut，Advice)，织入(Weave)两部分工作，当然还有一部分是将AOP整合到整个容器的生命周期中。
 
